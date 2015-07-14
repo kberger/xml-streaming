@@ -16,13 +16,16 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 executable xml-streaming
-  main-is:             Main.hs
+  main-is:             Xml.hs
   -- other-modules:       
   other-extensions:    OverloadedStrings,
                        QuasiQuotes
   build-depends:       base            >=4.7 && <4.8, 
                        containers      >=0.5 && <0.6, 
-                       xml-conduit     >=1.2 && <1.3, 
-                       system-filepath >=0.4 && <0.5
+                       xml-conduit, 
+                       system-filepath,
+                       resourcet,
+                       conduit,
+                       text
   -- hs-source-dirs:      
   default-language:    Haskell2010
